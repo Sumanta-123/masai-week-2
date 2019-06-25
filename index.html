@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Shipt</title>
+	<style type="text/css">
+		*{
+		box-sizing:border-box;
+		}
+		body{
+		background-color:black;
+		}
+		#result{
+			width:920px;
+			height:50px;
+
+			border:2px solid black;
+			margin-left:240px;
+			margin-top:20px;
+			font-size:30px;
+			text-align:center;
+			background-color:white;
+		}
+		/* whole page style coding goes here */
+		#main_box{
+			width:1020px;
+			height:700px;
+			border:1px solid red;
+			margin:0 auto;
+			border:none;
+		}
+		.row_1{
+			width:1000px;
+			height:60px;
+			border:1px solid green;
+			border:none;
+			margin-top:30px;
+			margin-left:20px;
+		}
+		/* dell button style coding goes here */
+		.dell{
+			position:relative;
+			top:17px;
+			right:10px;
+		}
+		.row_2{
+			width:900px;
+			margin-top:40px;
+			margin-left:70px;
+		}
+		.row2_col2{
+			margin-left:20px;
+			text-align:center;
+			padding-left:23px;
+		}
+		.row3{
+			margin-left:115px;
+			width:850px;
+			margin-top:25px;
+
+		}
+		.row4{
+			margin-left:160px;
+			text-align:left;
+		}
+		/* all bottun coding goes here */
+		.char{
+			width:60px;
+			height:60px;
+			border:3px solid white;
+			margin-left:23px;
+			text-align:left;
+			background-color:black;
+			color:white;
+			font-size:16px;
+			border-radius:5px;
+		}
+		.dot_com{
+			text-align:left;
+			padding-left:10px;
+		}
+		/* space bar style coding goes here */
+		.spac_bar{
+			width:550px;
+			margin-left:90px;
+		}
+		.row5{
+			margin-left:135px;
+		}
+		.row5_col{
+			width:120px;
+			color:black;
+			background-color:white;
+			border:2px solid black;
+			font-weight:bold;
+			padding-left:35px;
+		}
+		.row6{
+			color:lightgreen;
+		}
+		/* password button style coding goes here */
+		.text_passd{
+			padding-left:20px;
+		}
+		#char_shipt2{
+			color:black;
+		}
+
+		span{
+			float:right;
+			color:white;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" name="typewriter" id="result"/>
+	<div id="main_box">
+<div class="row_1">
+<button class="char" id="char_0" onclick="char_one('!')"><span>!</span><br/><br/>1</button>
+<button class="char" id="char_1" onclick="char_two('@')"><span>@</span><br/><br/>2</button>
+<button class="char" id="char_2" onclick="char_three('#')"><span>#</span><br/><br/>3</button>
+<button class="char" id="char_3" onclick="char_four('$')"><span>$</span><br/><br/>4</button>
+<button class="char" id="char_4" onclick="char_five('%')"><span>%</span><br/><br/>5</button>
+<button class="char" id="char_5" onclick="char_six('^')"><span>^</span><br/><br/>6</button>
+<button class="char" id="char_6" onclick="char_seven('&')"><span>&</span><br/><br/>7</button>
+<button class="char" id="char_7" onclick="char_eight('*')"><span>*</span><br/><br/>8</button>
+<button class="char" id="char_8" onclick="char_nine('(')"><span>(</span><br/><br/>9</button>
+<button class="char" id="char_9" onclick="char_zero(')')"><span>)</span><br/><br/>0</button>
+<button class="char dell" id="char_del">Del</button>
+</div>
+<div class="row_1 row_2">
+<button class="char row2_col2" id="char_q">Q</button>
+<button class="char row2_col2" id="char_w">W</button>
+<button class="char row2_col2" id="char_e">E</button>
+<button class="char row2_col2" id="char_r">R</button>
+<button class="char row2_col2" id="char_t">T</button>
+<button class="char row2_col2" id="char_y">Y</button>
+<button class="char row2_col2" id="char_u">U</button>
+<button class="char row2_col2" id="char_i">I</button>
+<button class="char row2_col2" id="char_o">O</button>
+<button class="char row2_col2" id="char_p">P</button>
+</div>
+<div class="row_1 row_2 row3">
+<button class="char row2_col2" id="char_a">A</button>
+<button class="char row2_col2" id="char_s">S</button>
+<button class="char row2_col2" id="char_d">D</button>
+<button class="char row2_col2" id="char_f">F</button>
+<button class="char row2_col2" id="char_g">G</button>
+<button class="char row2_col2" id="char_h">H</button>
+<button class="char row2_col2" id="char_j">J</button>
+<button class="char row2_col2" id="char_k">K</button>
+<button class="char row2_col2" id="char_l">L</button>
+</div>
+<div class="row_1 row_2 row3 row4">
+<button class="char row2_col2" id="char_z">Z</button>
+<button class="char row2_col2" id="char_x">X</button>
+<button class="char row2_col2" id="char_c">C</button>
+<button class="char row2_col2" id="char_v">V</button>
+<button class="char row2_col2" id="char_b">B</button>
+<button class="char row2_col2" id="char_n">N</button>
+<button class="char row2_col2" id="char_m">M</button>
+<button class="char row2_col2 dot_com" id="char_com">.com</button>
+</div>
+<div class="row_1 row_2 row3 row4">
+<button class="char row2_col2 spac_bar" id="char_bar"></button>
+</div>
+<div class="row_1 row_2 row3 row4 row5">
+<button class="char row2_col2 row5_col" id="char_cap">CAPS</button>
+<button class="char row2_col2 row5_col" id="char_shipt">SHIFT</button>
+<button class="char row2_col2 row5_col text_passd" id="char_passwd">PASSWD</button>
+<button class="char row2_col2 row5_col" id="char_clean">CLEAN</button>
+<button class="char row2_col2 row5_col" id="char_rev">REV</button>
+</div>
+<div class="row_1 row_2 row3 row4 row5">
+<button class="char row2_col2 row5_col row6" id="char_cap2">CAPS</button>
+<button class="char row2_col2 row5_col row6" id="char_shipt2" onclick="shift()">
+	SHIFT
+</button>
+<button class="char row2_col2 row5_col row6 text_passd" id="char_passwd2">
+	PASSWD
+</button>
+<button class="char row2_col2 row5_col row6" id="char_clean2">CLEAN</button>
+<button class="char row2_col2 row5_col row6" id="char_rev2">REV</button>
+</div>
+</div>
+<script type="text/javascript">
+	// shift button scripting coding goes here 
+function shift()
+{
+		var prees_shift = document.getElementById("char_shipt2");
+		prees_shift.innerHTML="ACTIVE";
+		prees_shift.style.backgroundColor="lightgreen";
+		prees_shift.style.color="white";
+		document.getElementById('char_0').style.backgroundColor="#632606";
+		document.getElementById('char_1').style.backgroundColor="#632606";
+		document.getElementById('char_2').style.backgroundColor="#632606";
+		document.getElementById('char_3').style.backgroundColor="#632606";
+		document.getElementById('char_4').style.backgroundColor="#632606";
+		document.getElementById('char_5').style.backgroundColor="#632606";
+		document.getElementById('char_6').style.backgroundColor="#632606";
+		document.getElementById('char_7').style.backgroundColor="#632606";
+		document.getElementById('char_8').style.backgroundColor="#632606";
+		document.getElementById('char_9').style.backgroundColor="#632606";
+}
+// character ! scripting coding goes here !!!!!!!!!!!!!!!!!!!!!!
+function char_one(x)
+{	
+	var result = document.getElementById('result');
+	var prees_shift = document.getElementById("char_shipt2").innerHTML;
+	if (prees_shift=="ACTIVE" && x=="!")
+	{	
+		document.getElementById('char_shipt2').innerHTML="SHIFT";
+		document.getElementById('char_shipt2').style.backgroundColor="red";
+		document.getElementById('char_shipt2').style.color="white";
+		document.getElementById('char_0').style.backgroundColor="blue";
+		result.value +=x;
+	}
+	else{
+		result.value +=1;
+		document.getElementById('char_0').style.backgroundColor="blueviolet";
+	}
+}
+// character @ scripting coding goes here @@@@@@@@@@@@@@@@@@@@
+function char_two(x)
+{	
+	var result = document.getElementById('result');
+	var prees_shift = document.getElementById("char_shipt2").innerHTML;
+	if (prees_shift=="ACTIVE" && x=="@")
+	{	
+		document.getElementById('char_shipt2').innerHTML="SHIFT";
+		document.getElementById('char_shipt2').style.backgroundColor="red";
+		document.getElementById('char_shipt2').style.color="white";
+		document.getElementById('char_1').style.backgroundColor="blue";
+		result.value +=x;
+	}
+	else{
+		result.value +=2;
+		document.getElementById('char_1').style.backgroundColor="blueviolet";
+	}
+}
+// character # scripting codinge goes here ###############
+function char_three(x)
+{	
+	var result = document.getElementById('result');
+	var prees_shift = document.getElementById("char_shipt2").innerHTML;
+	if (prees_shift=="ACTIVE" && x=="#")
+	{	
+		document.getElementById('char_shipt2').innerHTML="SHIFT";
+		document.getElementById('char_shipt2').style.backgroundColor="red";
+		document.getElementById('char_shipt2').style.color="white";
+		document.getElementById('char_2').style.backgroundColor="blue";
+		result.value +=x;
+	}
+	else{
+		result.value +=3;
+		document.getElementById('char_2').style.backgroundColor="blueviolet";
+	}
+}
+// character $ scripting coding goes here $$$$$$$$$$$$$$$$$$$$$$
+function char_four(x)
+{	
+	var result = document.getElementById('result');
+	var prees_shift = document.getElementById("char_shipt2").innerHTML;
+	if (prees_shift=="ACTIVE" && x=="$")
+	{	
+		document.getElementById('char_shipt2').innerHTML="SHIFT";
+		document.getElementById('char_shipt2').style.backgroundColor="red";
+		document.getElementById('char_shipt2').style.color="white";
+		document.getElementById('char_3').style.backgroundColor="blue";
+		result.value +=x;
+	}
+	else{
+		result.value +=4;
+		document.getElementById('char_3').style.backgroundColor="blueviolet";
+	}
+}
+// character % scripting coding goes here %%%%%%%%%%%%%%%%%%%%%%
+function char_five(x)
+{	
+	var result = document.getElementById('result');
+	var prees_shift = document.getElementById("char_shipt2").innerHTML;
+	if (prees_shift=="ACTIVE" && x=="%")
+	{	
+		document.getElementById('char_shipt2').innerHTML="SHIFT";
+		document.getElementById('char_shipt2').style.backgroundColor="red";
+		document.getElementById('char_shipt2').style.color="white";
+		document.getElementById('char_4').style.backgroundColor="blue";
+		result.value +=x;
+	}
+	else{
+		result.value +=5;
+		document.getElementById('char_4').style.backgroundColor="blueviolet";
+	}
+}
+// character ^ scripting coding goes here ^^^^^^^^^^^^^^^^^^^^^
+function char_six(x)
+{	
+	var result = document.getElementById('result');
+	var prees_shift = document.getElementById("char_shipt2").innerHTML;
+	if (prees_shift=="ACTIVE" && x=="^")
+	{	
+		document.getElementById('char_shipt2').innerHTML="SHIFT";
+		document.getElementById('char_shipt2').style.backgroundColor="red";
+		document.getElementById('char_shipt2').style.color="white";
+		document.getElementById('char_5').style.backgroundColor="blue";
+		result.value +=x;
+	}
+	else{
+		result.value +=6;
+		document.getElementById('char_5').style.backgroundColor="blueviolet";
+	}
+}
+// character & scripting coding goes here &&&&&&&&&&&&&&&&&&&&&&&&&&
+function char_seven(x)
+{	
+	var result = document.getElementById('result');
+	var prees_shift = document.getElementById("char_shipt2").innerHTML;
+	if (prees_shift=="ACTIVE" && x=="&")
+	{	
+		document.getElementById('char_shipt2').innerHTML="SHIFT";
+		document.getElementById('char_shipt2').style.backgroundColor="red";
+		document.getElementById('char_shipt2').style.color="white";
+		document.getElementById('char_6').style.backgroundColor="blue"
+		result.value +=x;
+	}
+	else{
+		result.value +=7;
+		document.getElementById('char_6').style.backgroundColor="blueviolet"
+	}
+}
+// character * scripting coding goes here ************************
+function char_eight(x)
+{	
+	var result = document.getElementById('result');
+	var prees_shift = document.getElementById("char_shipt2").innerHTML;
+	if (prees_shift=="ACTIVE" && x=="*")
+	{	
+		document.getElementById('char_shipt2').innerHTML="SHIFT";
+		document.getElementById('char_shipt2').style.backgroundColor="red";
+		document.getElementById('char_shipt2').style.color="white";
+		document.getElementById('char_7').style.backgroundColor="blue";
+		result.value +=x;
+	}
+	else{
+		result.value +=8;
+		document.getElementById('char_7').style.backgroundColor="blueviolet";
+	}
+}
+// character (  scripting coding goes here ((((((((((((
+function char_nine(x)
+{	
+	var result = document.getElementById('result');
+	var prees_shift = document.getElementById("char_shipt2").innerHTML;
+	if (prees_shift=="ACTIVE" && x=="(")
+	{	
+		document.getElementById('char_shipt2').innerHTML="SHIFT";
+		document.getElementById('char_shipt2').style.backgroundColor="red";
+		document.getElementById('char_shipt2').style.color="white";
+		document.getElementById('char_8').style.backgroundColor="blue";
+		result.value +=x;
+	}
+	else{
+		result.value +=9;
+		document.getElementById('char_8').style.backgroundColor="blueviolet";
+	}
+}
+// character ) scripting coding goes here )))))))))))))))))))))))
+function char_zero(x)
+{	
+	var result = document.getElementById('result');
+	var prees_shift = document.getElementById("char_shipt2").innerHTML;
+	if (prees_shift=="ACTIVE" && x==")")
+	{	
+		document.getElementById('char_shipt2').innerHTML="SHIFT";
+		document.getElementById('char_shipt2').style.backgroundColor="red";
+		document.getElementById('char_shipt2').style.color="white";
+		document.getElementById('char_9').style.backgroundColor="blue";
+		result.value +=x;
+	}
+	else{
+		result.value +=0;
+		document.getElementById('char_9').style.backgroundColor="blueviolet";
+	}
+}
+</script>
+</body>
+</html>
